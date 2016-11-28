@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PDFPageViewController" customModule="TestPDF" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PqU-Jt-fq9" customClass="PDFPageView" customModule="TestPDF" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="contentView" destination="Wdh-L1-pbc" id="vmF-Ef-XOr"/>
+                                </connections>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="20" translatesAutoresizingMaskIntoConstraints="NO" id="UVS-4g-A5A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAA-5W-VBy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GDM_2012_09_12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-L1-pbc">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Wdh-L1-pbc" secondAttribute="bottom" id="2Ic-Vo-c5r"/>
+                                            <constraint firstItem="Wdh-L1-pbc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vAA-5W-VBy" secondAttribute="leading" id="8fO-Yf-uB3"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wdh-L1-pbc" secondAttribute="trailing" id="9A1-p0-8Q9"/>
+                                            <constraint firstItem="Wdh-L1-pbc" firstAttribute="centerY" secondItem="vAA-5W-VBy" secondAttribute="centerY" id="hhf-Zl-UeS"/>
+                                            <constraint firstItem="Wdh-L1-pbc" firstAttribute="centerX" secondItem="vAA-5W-VBy" secondAttribute="centerX" id="ouC-yS-Upx"/>
+                                            <constraint firstItem="Wdh-L1-pbc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vAA-5W-VBy" secondAttribute="top" id="qTk-xs-ZuY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vAA-5W-VBy" secondAttribute="trailing" id="1Jp-cW-ttz"/>
+                                    <constraint firstItem="vAA-5W-VBy" firstAttribute="leading" secondItem="UVS-4g-A5A" secondAttribute="leading" id="4bb-L5-mwn"/>
+                                    <constraint firstItem="vAA-5W-VBy" firstAttribute="centerY" secondItem="UVS-4g-A5A" secondAttribute="centerY" id="KEC-cP-RuO"/>
+                                    <constraint firstItem="vAA-5W-VBy" firstAttribute="centerX" secondItem="UVS-4g-A5A" secondAttribute="centerX" id="ZFF-bO-e5V"/>
+                                    <constraint firstItem="vAA-5W-VBy" firstAttribute="top" secondItem="UVS-4g-A5A" secondAttribute="top" id="nOh-Og-2pb"/>
+                                    <constraint firstAttribute="bottom" secondItem="vAA-5W-VBy" secondAttribute="bottom" id="xGV-RI-o0S"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ikM-Pe-sGk"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UVS-4g-A5A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="21y-eg-N2V"/>
+                            <constraint firstItem="PqU-Jt-fq9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6eM-1R-iXe"/>
+                            <constraint firstAttribute="trailing" secondItem="PqU-Jt-fq9" secondAttribute="trailing" id="7lZ-Kw-Jep"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UVS-4g-A5A" secondAttribute="bottom" id="Zkt-3g-1XM"/>
+                            <constraint firstItem="UVS-4g-A5A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cSe-9e-Dc6"/>
+                            <constraint firstItem="PqU-Jt-fq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qgY-nB-soc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PqU-Jt-fq9" secondAttribute="bottom" id="vFc-RK-0CJ"/>
+                            <constraint firstAttribute="trailing" secondItem="UVS-4g-A5A" secondAttribute="trailing" id="yy8-XR-ifO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="Wdh-L1-pbc" id="Vmc-6a-RFe"/>
+                        <outlet property="pdfPageView" destination="PqU-Jt-fq9" id="QNh-2A-76e"/>
+                        <outlet property="scrollView" destination="UVS-4g-A5A" id="jzp-Hk-vmZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GDM_2012_09_12.jpg" width="558" height="756"/>
+    </resources>
+</document>
