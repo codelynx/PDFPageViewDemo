@@ -31,33 +31,19 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="20" translatesAutoresizingMaskIntoConstraints="NO" id="UVS-4g-A5A">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAA-5W-VBy">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GDM_2012_09_12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-L1-pbc">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <subviews>
-                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GDM_2012_09_12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-L1-pbc">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </imageView>
-                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Wdh-L1-pbc" secondAttribute="bottom" id="2Ic-Vo-c5r"/>
-                                            <constraint firstItem="Wdh-L1-pbc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vAA-5W-VBy" secondAttribute="leading" id="8fO-Yf-uB3"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wdh-L1-pbc" secondAttribute="trailing" id="9A1-p0-8Q9"/>
-                                            <constraint firstItem="Wdh-L1-pbc" firstAttribute="centerY" secondItem="vAA-5W-VBy" secondAttribute="centerY" id="hhf-Zl-UeS"/>
-                                            <constraint firstItem="Wdh-L1-pbc" firstAttribute="centerX" secondItem="vAA-5W-VBy" secondAttribute="centerX" id="ouC-yS-Upx"/>
-                                            <constraint firstItem="Wdh-L1-pbc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vAA-5W-VBy" secondAttribute="top" id="qTk-xs-ZuY"/>
-                                        </constraints>
-                                    </view>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="vAA-5W-VBy" secondAttribute="trailing" id="1Jp-cW-ttz"/>
-                                    <constraint firstItem="vAA-5W-VBy" firstAttribute="leading" secondItem="UVS-4g-A5A" secondAttribute="leading" id="4bb-L5-mwn"/>
-                                    <constraint firstItem="vAA-5W-VBy" firstAttribute="centerY" secondItem="UVS-4g-A5A" secondAttribute="centerY" id="KEC-cP-RuO"/>
-                                    <constraint firstItem="vAA-5W-VBy" firstAttribute="centerX" secondItem="UVS-4g-A5A" secondAttribute="centerX" id="ZFF-bO-e5V"/>
-                                    <constraint firstItem="vAA-5W-VBy" firstAttribute="top" secondItem="UVS-4g-A5A" secondAttribute="top" id="nOh-Og-2pb"/>
-                                    <constraint firstAttribute="bottom" secondItem="vAA-5W-VBy" secondAttribute="bottom" id="xGV-RI-o0S"/>
+                                    <constraint firstItem="Wdh-L1-pbc" firstAttribute="centerX" secondItem="UVS-4g-A5A" secondAttribute="centerX" id="AvT-IX-JfN"/>
+                                    <constraint firstItem="Wdh-L1-pbc" firstAttribute="top" secondItem="UVS-4g-A5A" secondAttribute="top" id="F2X-SG-V6m"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wdh-L1-pbc" secondAttribute="trailing" id="IXi-5N-HQv"/>
+                                    <constraint firstItem="Wdh-L1-pbc" firstAttribute="centerY" secondItem="UVS-4g-A5A" secondAttribute="centerY" id="VlP-4o-yZX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wdh-L1-pbc" secondAttribute="bottom" id="g1N-Y9-5AR"/>
+                                    <constraint firstItem="Wdh-L1-pbc" firstAttribute="leading" secondItem="UVS-4g-A5A" secondAttribute="leading" id="ubq-CO-nhN"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ikM-Pe-sGk"/>

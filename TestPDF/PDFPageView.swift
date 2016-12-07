@@ -34,6 +34,12 @@ class PDFPageView: UIView {
     @IBOutlet weak var contentView: UIView!
     var page: CGPDFPage!
 
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		self.layer.drawsAsynchronously = true
+		self.contentScaleFactor = self.window?.screen.scale ?? UIScreen.main.scale
+	}
+
     override func draw(_ layer: CALayer, in ctx: CGContext) {
         UIGraphicsPushContext(ctx)
         ctx.saveGState()
