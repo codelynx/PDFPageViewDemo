@@ -31,11 +31,11 @@ import CoreGraphics
 
 
 public func DegreesToRadians(_ value: CGFloat) -> CGFloat {
-	return value * CGFloat(M_PI) / 180.0
+	return value * CGFloat.pi / 180.0
 }
  
 public func RadiansToDegrees (_ value: CGFloat) -> CGFloat {
-	return value * 180.0 / CGFloat(M_PI)
+	return value * 180.0 / CGFloat.pi
 }
 
 public extension CGRect {
