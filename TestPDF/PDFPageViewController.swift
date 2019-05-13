@@ -1,6 +1,6 @@
 //
-//  PDFPageViewController.swift
-//  TestPDF
+//	PDFPageViewController.swift
+//	TestPDF
 //
 //	The MIT License (MIT)
 //
@@ -50,7 +50,6 @@ class PDFPageViewController: UIViewController, UIScrollViewDelegate {
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
 	}
 
 	override func viewWillLayoutSubviews() {

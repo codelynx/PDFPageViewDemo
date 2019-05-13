@@ -40,7 +40,7 @@ public func RadiansToDegrees (_ value: CGFloat) -> CGFloat {
 
 public extension CGRect {
 
-	public func aspectFill(_ size: CGSize) -> CGRect {
+	func aspectFill(_ size: CGSize) -> CGRect {
 		let result: CGRect
 		let margin: CGFloat
 		let horizontalRatioToFit = self.size.width / size.width
@@ -61,7 +61,7 @@ public extension CGRect {
 		return result;
 	}
 
-	public func aspectFit(_ size: CGSize) -> CGRect {
+	func aspectFit(_ size: CGSize) -> CGRect {
 		let minX = self.minX
 		let minY = self.minY
 		let widthRatio = self.size.width / size.width
@@ -77,7 +77,7 @@ public extension CGRect {
 
 public extension CGSize {
 
-	public func aspectFit(_ size: CGSize) -> CGSize {
+	func aspectFit(_ size: CGSize) -> CGSize {
 		let widthRatio = self.width / size.width
 		let heightRatio = self.height / size.height
 		let ratio = (widthRatio < heightRatio) ? widthRatio : heightRatio
@@ -101,17 +101,17 @@ public func - (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
 }
 
 public extension CGRect {
-	public var minXminY: CGPoint { return CGPoint(x: self.minX, y: self.minY) }
-	public var midXminY: CGPoint { return CGPoint(x: self.midX, y: self.minY) }
-	public var maxXminY: CGPoint { return CGPoint(x: self.maxX, y: self.minY) }
+	var minXminY: CGPoint { return CGPoint(x: self.minX, y: self.minY) }
+	var midXminY: CGPoint { return CGPoint(x: self.midX, y: self.minY) }
+	var maxXminY: CGPoint { return CGPoint(x: self.maxX, y: self.minY) }
 
-	public var minXmidY: CGPoint { return CGPoint(x: self.minX, y: self.midY) }
-	public var midXmidY: CGPoint { return CGPoint(x: self.midX, y: self.midY) }
-	public var maxXmidY: CGPoint { return CGPoint(x: self.maxX, y: self.midY) }
+	var minXmidY: CGPoint { return CGPoint(x: self.minX, y: self.midY) }
+	var midXmidY: CGPoint { return CGPoint(x: self.midX, y: self.midY) }
+	var maxXmidY: CGPoint { return CGPoint(x: self.maxX, y: self.midY) }
 
-	public var minXmaxY: CGPoint { return CGPoint(x: self.minX, y: self.maxY) }
-	public var midXmaxY: CGPoint { return CGPoint(x: self.midX, y: self.maxY) }
-	public var maxXmaxY: CGPoint { return CGPoint(x: self.maxX, y: self.maxY) }
+	var minXmaxY: CGPoint { return CGPoint(x: self.minX, y: self.maxY) }
+	var midXmaxY: CGPoint { return CGPoint(x: self.midX, y: self.maxY) }
+	var maxXmaxY: CGPoint { return CGPoint(x: self.maxX, y: self.maxY) }
 }
 
 
