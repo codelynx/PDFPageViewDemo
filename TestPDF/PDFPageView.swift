@@ -36,35 +36,25 @@ class PDFPageView: UIView {
 	
 	override func layoutSubviews() {
 		super.layoutSubviews()
-		self.layer.drawsAsynchronously = true
 		self.contentScaleFactor = self.window?.screen.scale ?? UIScreen.main.scale
 	}
 	
-	override func draw(_ layer: CALayer, in ctx: CGContext) {
-		UIGraphicsPushContext(ctx)
+	override func draw(_ rect: CGRect) {
+		guard let ctx = UIGraphicsGetCurrentContext() else { return }
 		ctx.saveGState()
-		
+
 		let box = page.getBoxRect(.cropBox)
 		let contentBounds = self.contentView.bounds.aspectFit(box.size)
 		let rect = self.contentView.convert(contentBounds, to: self)
 		ctx.translateBy(x: rect.minX, y: rect.minY)
 		ctx.translateBy(x: 0, y: rect.height)
 		ctx.scaleBy(x: 1, y: -1)
-		
 		let scale = min(rect.width / box.width, rect.height / box.height)
 		ctx.scaleBy(x: scale, y: scale)
 		
 		ctx.drawPDFPage(page)
 		
 		ctx.restoreGState()
-		UIGraphicsPopContext()
-		
-		self.contentView.isHidden = true
-	}
-	
-	override func setNeedsDisplay() {
-		super.setNeedsDisplay()
-		self.layer.setNeedsDisplay()
 	}
 	
 }
